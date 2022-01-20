@@ -1,0 +1,32 @@
+<footer>
+    <div class="container">
+        <div class="footer-nav">
+
+            <dl>
+                <dt>关于我们</dt>
+                <dd><a href="/about?title=culture"><span>企业文化</span></a></dd>
+                <dd><a href="/about?title=developpent"><span>发展历程</span></a></dd>
+                <dd><a href="/about?title=background"><span>集团背景</span></a></dd>
+            </dl>  
+             <dl>
+                <dt>新闻资讯</dt>
+                <dd><a href="/news"><span>公司新闻</span></a></dd>
+                <dd><a href="/industry"><span>行业资讯</span></a></dd>
+            </dl>
+            <dl>
+                <dt>加入团队</dt>
+                <dd><a href="/join?title=recruit"><span>招聘信息</span></a></dd>
+                <dd><a href="/join?title=school"><span>院校合作</span></a></dd>
+            </dl>
+            <dl>
+                <dt class="lastdt">联系我们</dt>
+                <dd><a href="/contact"><span>联系方式</span></a></dd>
+            </dl> 
+        </div>
+        <p>© <script>document.write("2016-"+new Date().getFullYear());</script> {{ .Site.Copyright}}  版权所有  <a href="{{ .Site.Params.IcpURL }}" target="_blank">{{ .Site.Params.IcpID }}</a>  </p>
+        
+    </div>
+</footer>
+
+{{ $mainJs := resources.Get "js/default.js" | js.Build "default.js" | minify | fingerprint }}
+<script src="{{ $mainJs.RelPermalink }}"></script>
