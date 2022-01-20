@@ -28,5 +28,5 @@
     </div>
 </footer>
 
-{{ $mainJs := resources.Get "js/default.js" | js.Build "default.js" | minify | fingerprint }}
+{{ $mainJs := resources.Get "js/default.js" | minify | fingerprint }}
 <script src="{{ $mainJs.RelPermalink }}"></script>
