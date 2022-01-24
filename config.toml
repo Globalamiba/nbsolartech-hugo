@@ -4,7 +4,7 @@ title = "NingBo Solar Tech"
 theme = "solar-tech"
 paginate = 6
 
-copyright = "宁波黑米信息科技有限公司"
+copyright = "Ningbo Solar Import & Export Co., Ltd."
 
 [params]
     dateFormat = "2006年01月02日"
@@ -13,25 +13,21 @@ copyright = "宁波黑米信息科技有限公司"
 
 # Main Menu
 [[menu.main]]
-name = "首页"
+name = "HOME"
 url = ""
 weight = 1
 [[menu.main]]
-name = "关于黑米"
+name = "ABOUT"
 url = "about"
 weight = 2
 [[menu.main]]
-name = "新闻资讯"
-url = "news"
+name = "PRODUCT"
+url = "product"
 weight = 3
 [[menu.main]]
-name = "加入团队"
-url = "join"
-weight = 4
-[[menu.main]]
-name = "联系我们"
+name = "CONTACT"
 url = "contact"
-weight = 5
+weight = 4
 
 # Footer menu
 [[menu.footer]]
