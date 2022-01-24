@@ -2,8 +2,7 @@
     <img class="banner-img-mobile" src="/images/index_banner.jpg" alt="">
     <img class="banner-img-pc" src="/images/index_banner_pc.jpg" alt="">
     <div class="banner-desc">
-        <h2>助力中国消费品牌走向世界</h2>
-        <p>Committed to becoming an outstanding brand operator</p>
+        <p class="container">NINGBO HEYME INFORMATION TECHNOLOGY CO., LTD is committed to become a brilliant brand operator in order to assist and lead the Chinese consumer brand globalization</p>
     </div>
 </div>
 
@@ -12,12 +11,8 @@
         <div class="company-profile-desc">
             <img src="/images/index_img1.jpg" alt="">
             <div class="company-profile-desc-cmp">
-                <h2>企业简介</h2>
-                <p>宁波黑米信息科技有限公司隶属于锦灏集团（宁波
-                    排列前茅的大型出口企业），是一个成立3年多的
-                    专业跨境电商运营公司，办公面积2000平米。黑米
-                    以助力中国消费品牌走向世界为使命，致力于成为
-                    一个卓越的品牌运营商。
+                <h2>Company Profile </h2>
+                <p>Ningbo Solar Import & Export Co., Ltd. is a wholly-owned subsidiary of Winpex Group (one of the largest export enterprises in Ningbo). It's a professional multinational e-commerce operation company, with an office area of 2,000 square meters, which has established for more than 3 years.
                 </p>
             </div>
         </div>
@@ -26,154 +21,42 @@
                 <div class="company-profile-fun-icon">
                     <i class="iconfont">&#xe606;</i>
                 </div>
-                <p>推广运营</p>
+                <p style="width: 120px;">Promotion and Operation</p>
             </li>
             <li>
                 <div class="company-profile-fun-icon">
                     <i class="iconfont">&#xe667;</i>
                 </div>
-                <p>产品研发</p>
+                <p style="width: 120px;">Product Research and Development</p>
             </li>
             <li>
                 <div class="company-profile-fun-icon">
                     <i class="iconfont yellow">&#xe627;</i>
                 </div>
-                <p>专利</p>
+                <p style="width: 120px;">Patent</p>
             </li>
             <li>
                 <div class="company-profile-fun-icon">
                     <i class="iconfont ">&#xe662;</i>
                 </div>
-                <p>海外资源整合</p>
+                <p style="width: 120px;">Integration of Overseas esources</p>
             </li>
         </ul>
-    </div>
-
-</div>
-<div class="company-news">
-    <div class="container">
-
-        <div class="company-news-content">
-            <h2>公司新闻</h2>
-            {{ with  site.GetPage "/news"}} 
-            {{/*  {{ range first 3 site.RegularPages.ByDate.Reverse  }}     */}}     
-            {{ range first 3 .Paginator.Pages.ByDate.Reverse  }} 
-            {{/*  按照文本时间排序  */}}
-            <a class="company-news-content-item active" href="{{.Permalink}}">
-                 <div class="company-news-content-item-date">         
-                    <span>{{.Date.Format "2"}}</span>
-                    <span>{{.Date.Format "January "}}</span>
-                </div>
-                <div class="company-news-content-item-cont">
-                    <p class="company-news-content-item-title">{{.Title}}</p>
-                    <p>{{.Description}}</p>
-                </div>
-             </a>  
-           {{ end }} 
-           {{ end }}
-        </div>
-
-        <div class="industry-info">
-            <h2 class="noline">行业资讯</h2>
-            {{ with  site.GetPage "/industry"}} 
-            {{ range first 1 .Paginator.Pages.ByDate.Reverse  }}
-            <a class="industry-info-box" href="{{.Permalink}}">
-              <div class="industry-info-img">
-                <img src="{{.Params.image | absURL}}" alt="">           
-                </div>  
-                <p>{{.Title}}</p>    
-            </a>
-            {{ end }} 
-            {{end}}
-
-        </div>
-    </div>
-
-</div>
-<div class="company-deve">
-    <div class="container">
-        <h2>发展历程</h2>
-        <div class="date-plane">
-            <div class="date-plane-item">
-                <h4>2017</h4>
-                <div class="date-plane-item-desc">
-                    <p><span>2017年1月</span>宁波黑米信息科技有限公司XXXX</p>
-                    <p><span>2017年3月</span>宁波黑米信息科技有限公司XXXX</p>
-                    <p><span>2017年7月</span>宁波黑米信息科技有限公司XXXX</p>
-                    <p><span>2017年9月</span>宁波黑米信息科技有限公司XXXX</p>
-                </div>
-
-            </div>
-            <div class="date-plane-item show">
-                <h4>2018</h4>
-                <div class="date-plane-item-desc">
-                    <p><span>2018年1月</span>宁波黑米信息科技有限公司XXXX</p>
-                    <p><span>2018年3月</span>宁波黑米信息科技有限公司XXXX</p>
-                    <p><span>2018年7月</span>宁波黑米信息科技有限公司XXXX</p>
-                    <p><span>2018年9月</span>宁波黑米信息科技有限公司XXXX</p>
-                </div>
-            </div>
-            <div class="date-plane-item">
-                <h4>2019</h4>
-                <div class="date-plane-item-desc">
-                    <p><span>2019年1月</span>宁波黑米信息科技有限公司XXXX</p>
-                    <p><span>2019年3月</span>宁波黑米信息科技有限公司XXXX</p>
-                    <p><span>2019年7月</span>宁波黑米信息科技有限公司XXXX</p>
-                    <p><span>2019年9月</span>宁波黑米信息科技有限公司XXXX</p>
-                </div>
-
-            </div>
-            <div class="date-plane-item">
-                <h4>2020</h4>
-                <div class="date-plane-item-desc">
-                    <p><span>2020年1月</span>宁波黑米信息科技有限公司XXXX</p>
-                    <p><span>2020年3月</span>宁波黑米信息科技有限公司XXXX</p>
-                    <p><span>2020年7月</span>宁波黑米信息科技有限公司XXXX</p>
-                    <p><span>2020年9月</span>宁波黑米信息科技有限公司XXXX</p>
-                </div>
-            </div>
-            <div class="date-plane-item">
-                <h4>2021</h4>
-                <div class="date-plane-item-desc">
-                    <p><span>2021年1月</span>宁波黑米信息科技有限公司XXXX</p>
-                    <p><span>2021年3月</span>宁波黑米信息科技有限公司XXXX</p>
-                    <p><span>2021年7月</span>宁波黑米信息科技有限公司XXXX</p>
-                    <p><span>2021年9月</span>宁波黑米信息科技有限公司XXXX</p>
-                </div>
-            </div>
-        </div>
-        <div class="time-line">
-            <ul>
-                <li><span>2017</span><b></b></li>
-                <li class="active"><span>2018</span><b></b></li>
-                <li><span>2019</span><b></b></li>
-                <li><span>2020</span><b></b></li>
-                <li><span>2021</span><b></b></li>
-            </ul>
-        </div>
     </div>
 
 </div>
 
 <div class="company-rele">
     <div class="container">
-        <h2>企业相关</h2>
+        <h2>Company Related</h2>
         <div class="company-rele-content">
             <a class="company-rele-content-item " href="/about">
-                <img src="/images/index_img3.jpg" alt="">
-                <p>集团背景</p>
+                <img src="/images/index_jtbj.jpg" alt="">
+                <p>Group Background</p>
             </a>
             <a class="company-rele-content-item" href="/about">
-                <img src="/images/index_img4.jpg" alt="">
-                <p>企业文化</p>
-            </a>
-            <a class="company-rele-content-item" href="/join">
-                <img src="/images/index_img5.jpg" alt="">
-                <p>院校合作</p>
-            </a>
-            <a class="company-rele-content-item" href="/join">
-                <img src="/images/index_img6.jpg" alt="">
-                <p>招聘信息</p>
+                <img src="/images/index_qywh.jpg" alt="">
+                <p>Company Culture</p>
             </a>
         </div>
     </div>
