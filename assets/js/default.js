@@ -20,12 +20,10 @@ var url = window.location.href;
 
 if (url.indexOf('about') !== -1) {
   navGetColor(1);
-} else if (url.indexOf('news') !== -1 || url.indexOf('industry') !== -1) {
+} else if (url.indexOf('product') !== -1) {
   navGetColor(2);
-} else if (url.indexOf('join') !== -1 || url.indexOf('job') !== -1) {
-  navGetColor(3);
 } else if (url.indexOf('contact') !== -1) {
-  navGetColor(4);
+  navGetColor(3);
 } else {
   navGetColor(0);
 }
@@ -94,13 +92,14 @@ if (currentUrl.pathname === '/about/' && currentUrl.search) {
   if (currentUrl.search.split('=')[1] === 'culture') {
     aboutli[0].classList.add('active');
     aboutbox[0].classList.add('show');
-  } else if (currentUrl.search.split('=')[1] === 'developpent') {
+  } else if (currentUrl.search.split('=')[1] === 'background') {
     aboutli[1].classList.add('active');
     aboutbox[1].classList.add('show');
-  } else if (currentUrl.search.split('=')[1] === 'background') {
-    aboutli[2].classList.add('active');
-    aboutbox[2].classList.add('show');
   }
+  //  else if (currentUrl.search.split('=')[1] === 'background') {
+  //   aboutli[2].classList.add('active');
+  //   aboutbox[2].classList.add('show');
+  // }
 }
 for (var i = 0; i < aboutli.length; i++) {
   aboutli[i].index = i;
@@ -224,4 +223,27 @@ for (var i = 0; i < joinitem.length; i++) {
       rotatei[this.index].classList.add('rotated');
     }
   };
+}
+
+if (currentUrl.pathname === '/product/') {
+  var mulu = document.getElementsByClassName("menu-item")[0];
+  var item = mulu.querySelectorAll("li");
+  var content = document.getElementById("content-right");
+  var title = content.querySelector("h3");
+  title.innerHTML = item[0].innerHTML;
+  var content_ul = content.querySelectorAll("ul");
+  content_ul[0].classList.remove("hide");
+  for(var i = 0; i < item.length; i++) {
+    item[i].index = i;
+    item[i].onclick = function() {
+        title.innerHTML = this.innerHTML;
+        for(var j = 0; j < content_ul.length; j++) {
+            if(j === this.index) {
+                content_ul[j].classList.remove("hide");
+            }else {
+                content_ul[j].classList.add("hide");
+            }
+        }
+    }
+  }
 }
