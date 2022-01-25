@@ -225,25 +225,25 @@ for (var i = 0; i < joinitem.length; i++) {
   };
 }
 
-if (currentUrl.pathname === '/product/') {
-  var mulu = document.getElementsByClassName("menu-item")[0];
-  var item = mulu.querySelectorAll("li");
-  var content = document.getElementById("content-right");
-  var title = content.querySelector("h3");
-  title.innerHTML = item[0].innerHTML;
-  var content_ul = content.querySelectorAll("ul");
-  content_ul[0].classList.remove("hide");
-  for(var i = 0; i < item.length; i++) {
-    item[i].index = i;
-    item[i].onclick = function() {
-        title.innerHTML = this.innerHTML;
-        for(var j = 0; j < content_ul.length; j++) {
-            if(j === this.index) {
-                content_ul[j].classList.remove("hide");
-            }else {
-                content_ul[j].classList.add("hide");
-            }
-        }
-    }
-  }
-}
+// if (currentUrl.pathname === '/product/') {
+//   var mulu = document.getElementsByClassName("menu-item")[0];
+//   var item = mulu.querySelectorAll("li");
+//   var content = document.getElementById("content-right");
+//   var title = content.querySelector("h3");
+//   title.innerHTML = item[0].innerHTML;
+//   var content_ul = content.querySelectorAll("ul");
+//   content_ul[0].classList.remove("hide");
+//   for(var i = 0; i < item.length; i++) {
+//     item[i].index = i;
+//     item[i].onclick = function() {
+//         title.innerHTML = this.innerHTML;
+//         for(var j = 0; j < content_ul.length; j++) {
+//             if(j === this.index) {
+//                 content_ul[j].classList.remove("hide");
+//             }else {
+//                 content_ul[j].classList.add("hide");
+//             }
+//         }
+//     }
+//   }
+// }
