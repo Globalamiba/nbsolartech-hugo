@@ -6,10 +6,6 @@ paginate = 6
 
 copyright = "Ningbo Solar Import & Export Co., Ltd."
 
-[params]
-    dateFormat = "2006年01月02日"
-    icpID = "浙ICP备2020032490号-1"
-    icpURL = "https://beian.miit.gov.cn/#/Integrated/index"
 
 # Main Menu
 [[menu.main]]
