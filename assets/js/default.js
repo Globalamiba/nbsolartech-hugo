@@ -28,6 +28,7 @@ if (url.indexOf('about') !== -1) {
   navGetColor(0);
 }
 
+//顶部菜单栏nav颜色改变
 function navGetColor(item) {
   for (var i = 0; i < aLis.length; i++) {
     if (i == item) {
@@ -39,46 +40,7 @@ function navGetColor(item) {
     }
   }
 }
-//顶部菜单栏nav颜色改变
 
-// for(var i = 0; i < aLis.length; i++) {
-//     aLis[i].index = i;
-//     aLis[i].onclick = function() {
-//         for(var j = 0; j < aLis.length; j++) {
-//             aLis[j].className = '';
-//         }
-//         this.className = "active";
-//     };
-// }
-//选项卡
-
-var cmpynews = document.querySelectorAll('.company-news-content-item');
-for (var i = 0; i < cmpynews.length; i++) {
-  cmpynews[i].index = i;
-  cmpynews[i].onclick = function () {
-    for (var j = 0; j < cmpynews.length; j++) {
-      cmpynews[j].classList.remove('active');
-    }
-    this.classList.add('active');
-  };
-}
-
-//首页新闻
-
-// var newscontent = document.querySelectorAll('.news-content-nav li')
-// var newbox  = document.querySelectorAll('.new-content-box')
-// for (var i = 0; i < newscontent.length; i++) {
-//     newscontent[i].index = i;
-//     newscontent[i].onclick = function () {
-//         for (var j = 0; j < newscontent.length; j++) {
-//             newscontent[j].classList.remove('active')
-//             newbox[j].classList.remove('show')
-//         }
-//         this.classList.add('active')
-//         newbox[this.index].classList.add('show')
-//     };
-// }
-//新闻页切换
 
 var aboutbox = document.querySelectorAll('.about-content-box');
 
@@ -96,11 +58,9 @@ if (currentUrl.pathname === '/about/' && currentUrl.search) {
     aboutli[1].classList.add('active');
     aboutbox[1].classList.add('show');
   }
-  //  else if (currentUrl.search.split('=')[1] === 'background') {
-  //   aboutli[2].classList.add('active');
-  //   aboutbox[2].classList.add('show');
-  // }
 }
+
+//文化选项卡
 for (var i = 0; i < aboutli.length; i++) {
   aboutli[i].index = i;
   aboutli[i].onclick = function () {
@@ -112,40 +72,10 @@ for (var i = 0; i < aboutli.length; i++) {
     aboutbox[this.index].classList.add('show');
   };
 }
-//文化选项卡
 
-var joinbox = document.querySelectorAll('.join-content-box');
 
-var joinli = document.querySelectorAll('.join-content-nav li');
-
-if (currentUrl.pathname === '/join/' && currentUrl.search) {
-  for (var i = 0; i < joinli.length; i++) {
-    joinli[i].classList.remove('active');
-    joinbox[i].classList.remove('show');
-  }
-  if (currentUrl.search.split('=')[1] === 'recruit') {
-    joinli[0].classList.add('active');
-    joinbox[0].classList.add('show');
-  } else if (currentUrl.search.split('=')[1] === 'school') {
-    joinli[1].classList.add('active');
-    joinbox[1].classList.add('show');
-  }
-}
-for (var i = 0; i < joinli.length; i++) {
-  joinli[i].index = i;
-  joinli[i].onclick = function () {
-    for (var j = 0; j < joinli.length; j++) {
-      joinli[j].classList.remove('active');
-      joinbox[j].classList.remove('show');
-    }
-    this.classList.add('active');
-    joinbox[this.index].classList.add('show');
-  };
-}
-//招聘信息选项卡
-
+//时间线
 var timeplane = document.querySelectorAll('.date-plane-item');
-
 var timeline = document.querySelectorAll('.company-deve .time-line ul li b');
 for (var i = 0; i < timeline.length; i++) {
   timeline[i].index = i;
@@ -158,7 +88,7 @@ for (var i = 0; i < timeline.length; i++) {
     timeplane[this.index].classList.add('show');
   };
 }
-//时间线
+
 
 var heycourse = document.querySelectorAll('.heyme-course-content');
 var timelinetwo = document.querySelectorAll(
@@ -176,6 +106,7 @@ for (var i = 0; i < timelinetwo.length; i++) {
   };
 }
 
+//弹窗关闭
 var navdialog = document.querySelector('.nav-dialog');
 var navdialogcontent = document.querySelector('.nav-dialog-content');
 document.querySelector('.nav-btn').onclick = function () {
@@ -197,8 +128,9 @@ navdialog.addEventListener('click', function () {
 });
 navdialogcontent.addEventListener('click', function (ev) {
   ev.stopPropagation();
-}); //弹窗关闭
+}); 
 
+//顶部导航栏
 var nav = document.getElementById('nav');
 var docEl = document.documentElement;
 var moveHight = 0;
@@ -209,7 +141,7 @@ window.onscroll = function () {
   var top = docEl.scrollTop;
   nav.classList[top >= moveHight ? 'add' : 'remove']('fixed-head');
 };
-//顶部导航栏
+
 
 //单击小箭头旋转
 var joinitem = document.querySelectorAll('.join-job-cont-item-p');
